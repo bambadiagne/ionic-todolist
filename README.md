@@ -1,11 +1,11 @@
-# Github Users Stats
+# Ionic Todolist
 
 <b>An simple todolist angular app converted to an mobile app(ionic)</b>
 
 ## Installation
 
 <b>This project use at least ```16.14.x node version```,verify your version before install it
-After that add that token to the environments variable of your OS.</b>
+</b>
 
 Install all dependencies
 ```bash
@@ -25,6 +25,7 @@ ionic serve
 ng serve
 ```
 
+<b>If you would use it with your mobile phone(android) or in a emulator like Android studio,you can get the APK ,it's on folder ```platforms\android\app\build\outputs\apk\debug\app-debug.apk``` </b>
 ## Usage
 
 <br><b>With this app, you will be able to create tasks,modify it and delete it</b>
