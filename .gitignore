@@ -1,11 +1,23 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+node_modules
+.tmp
+.sass-cache
+**/bower_components or sometimes it is lib/**
+platforms
+plugins
+*.swp
+*.swo
+*.log
+*.DS_Store
+*.vscode
+
 # Compiled output
 /dist
 /tmp
 /out-tsc
 /bazel-out
-
+app/scripts/configuration.js
 # Node
 /node_modules
 npm-debug.log

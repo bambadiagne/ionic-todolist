@@ -1,0 +1,32 @@
+<div class='container-xl'  >
+    <div class="d-flex justify-content-center p-2 mx-auto mt-1">
+    <form [formGroup]="todoForm" (ngSubmit)="onSubmit()" class="bg-light p-5 rounded shadow-lg">
+        <div *ngIf="updateSuccessful" class="alert alert-success" role="alert">
+            Tache mise à jour🎉!
+          </div>
+        <p class='display-4'>Modifier tâche</p>
+        <div class='form-group'>
+                    
+            <label for="description" class="font-weight-bold h6">Description</label>
+            <input type="text" class='form-control p-2' placeholder='Rendre le projet' name="description" formControlName="description" id="description" for="description">   
+       </div>
+       <div class='form-group'>
+                    
+        <label for="name" class="font-weight-bold h6">Status de la tache</label>
+        <select name="status_task" formControlName="status_task"  name="status_task" class="form-select" id="status">
+          <option  *ngFor="let status of statusTask" value="{{status}}">{{status}}</option>
+        </select>
+    
+   </div>
+   <div class="form-group">
+    <label class="font-weight-bold h6">Date de création</label>
+    <app-date-picker  (selectedDate)="emitDate($event)"></app-date-picker>   
+   
+   </div>
+   <div class='form-group my-2 text-center'>
+        <button class='btn btn-success px-4 py-2 '><span>Modifier <i class="fa-solid fa-edit"></i></span></button>
+
+    </div>
+    </form>
+</div>
+</div>

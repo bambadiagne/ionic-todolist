@@ -1,0 +1,10 @@
+.fancy_card{
+
+}
+@media (min-width:800px) {
+  .fancy_card:hover {
+    transform: translate3D(0,-1px,0) scale(1.03);
+  }
+}
+
+  

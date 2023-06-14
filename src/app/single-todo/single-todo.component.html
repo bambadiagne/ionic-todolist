@@ -1,0 +1,81 @@
+<div class="fancy_card ">
+    <div class="my-4 row border shadow-lg">
+        <hr class="d-block d-sm-none" />
+        <div class="col-sm d-flex flex-column">
+          <div class="col">
+            <p class="fw-bold d-inline-flex align-items-center">
+                Description<i class="ri-git-repository-line ri-xl"></i>
+            </p>
+          </div>
+          <div>
+            <p class="fw-bolder h4">{{todo.description}}</p>
+          </div>
+        </div>
+        <hr class="d-block d-sm-none" />
+        <div class="col-sm d-flex flex-column">
+          <div class="col">
+            <p class="fw-bold d-inline-flex align-items-center ">
+              Status<i class="ri-star-line ri-xl"></i>
+            </p>
+          </div>
+          <div [ngSwitch]="todo.status_task" class="col-auto">
+            <span *ngSwitchCase="'TO_DO'" class="p-3 badge bg-dark">A faire</span>
+            <span *ngSwitchCase="'IN_PROGRESS'" class="p-3 badge bg-primary">En cours</span>
+            
+            <span *ngSwitchCase="'FINISHED'" class="p-3 badge bg-success">Terminé</span>
+          </div>
+        </div>
+        <hr class="d-block d-sm-none" />
+        <div class="col-sm d-flex flex-column">
+          <div class="col">
+            <p class="fw-bold d-inline-flex align-items-center">
+                Créée le
+            </p>
+          </div>
+          <div class="col-auto">
+            <p class="fw-bolder h4">{{ todo.created_at | date : 'longDate' }}</p>
+          </div>
+        </div>
+        <hr class="d-block d-sm-none" />
+        <div class="mt-5 mb-3 row justify-content-center">
+            <div class="col-auto">
+              <button
+                (click)="modifierTodo()"
+                type="button"
+                class="btn action px-5 py-3 my-3 my-sm-0 text-white"
+                style="background: #04304b"
+              >
+               Modifier 
+              </button>
+              <span class="m-4"></span>
+              <button
+              (click)="supprimerTodo()"
+                type="button"
+                class="btn action px-5 py-3 my-3 my-sm-0"
+                style="background: #04304b1a; color: #04304b"
+              >
+               Supprimer
+              </button>
+            </div>
+          </div>
+
+      </div>
+    
+</div>
+
+
+<!-- <div>
+    <h5 class="text-center">
+      {{todo.task}}&nbsp;<button
+        class="btn btn-primary"
+      >
+        <i class="fa fa-pen"></i>
+      </button>
+      &nbsp;
+      <button
+        class="btn btn-danger"
+      >
+        <i class="fa fa-trash" aria-hidden="true"></i>
+      </button>
+    </h5>
+  </div> -->
