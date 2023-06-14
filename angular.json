@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ionic-todolist": {
+    "app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -105,10 +105,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ionic-todolist:build:production"
+              "browserTarget": "app:build:production"
             },
             "development": {
-              "browserTarget": "ionic-todolist:build:development"
+              "browserTarget": "app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -116,7 +116,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ionic-todolist:build"
+            "browserTarget": "app:build"
           }
         },
         "test": {
@@ -144,24 +144,24 @@
         "ionic-cordova-serve": {
           "builder": "@ionic/cordova-builders:cordova-serve",
           "options": {
-            "cordovaBuildTarget": "ionic-todolist:ionic-cordova-build",
-            "devServerTarget": "ionic-todolist:serve"
+            "cordovaBuildTarget": "app:ionic-cordova-build",
+            "devServerTarget": "app:serve"
           },
           "configurations": {
             "production": {
-              "cordovaBuildTarget": "ionic-todolist:ionic-cordova-build:production",
-              "devServerTarget": "ionic-todolist:serve:production"
+              "cordovaBuildTarget": "app:ionic-cordova-build:production",
+              "devServerTarget": "app:serve:production"
             }
           }
         },
         "ionic-cordova-build": {
           "builder": "@ionic/cordova-builders:cordova-build",
           "options": {
-            "browserTarget": "ionic-todolist:build"
+            "browserTarget": "app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ionic-todolist:build:production"
+              "browserTarget": "app:build:production"
             }
           }
         }
