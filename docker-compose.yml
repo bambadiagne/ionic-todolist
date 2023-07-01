@@ -1,0 +1,16 @@
+version: '3'
+services:
+  frontend:
+    container_name: angular-app
+    image: ahmadoubamba/ionic-todolist:latest
+    restart: always
+    ports:
+      - "80:80"
+  nginx:
+    image: nginx
+    container_name: nginx-link
+    restart: always
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "81:80"

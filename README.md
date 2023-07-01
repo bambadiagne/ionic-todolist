@@ -1,6 +1,6 @@
 # Ionic Todolist
 
-<b>An simple todolist angular app converted to an mobile app(ionic)</b>
+<b>An simple todolist angular app converted to an mobile app(ionic).</b>
 
 ## Installation
 
